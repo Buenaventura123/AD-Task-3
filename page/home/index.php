@@ -1,8 +1,14 @@
 <?php
+session_start(); // Start session for cart functionality
+
 $pageTitle = 'Home';
-$pageCss = '/AD-Bookstore/page/home/assets/css/home.css';
-require_once __DIR__ . '/../../components/componentGroup/header.component.php';
-require_once __DIR__ . '/../../utils/app.utils.php';
+// CORRECTED: Project name to AD-Task-3 and 'page' to 'pages'
+$pageCss = '/AD-Task-3/page/home/assets/css/home.css'; 
+
+// Path for header and footer now correctly includes 'componentGroup'
+require_once __DIR__ . '/../../components/componentGroup/header.component.php'; 
+// Path for app_utils.php (assuming it's still app_utils.php with underscore)
+require_once __DIR__ . '/../../utils/app.utils.php'; 
 
 // Get all books using the utility function
 $books = getAllBooks();
@@ -13,15 +19,15 @@ $books = getAllBooks();
     <div class="books-grid">
         <?php foreach ($books as $book): ?>
             <?php
-            // Pass the current book data to the template
-            // Using extract() here for simplicity within the loop to make $book available directly
             extract(['book' => $book]);
-            include __DIR__ . '/../../components/template/book_card.component.php';
+            // Path for book_card.template.php now correctly includes 'templates' (plural) and '.template.php'
+            include __DIR__ . '/../../components/template/book_card.componen.php'; 
             ?>
         <?php endforeach; ?>
     </div>
 </section>
 
 <?php
-require_once __DIR__ . '/../../components/componentGroup/footer.component.php';
+// Path for footer now correctly includes 'componentGroup'
+require_once __DIR__ . '/../../components/componentGroup/footer.component.php'; 
 ?>
