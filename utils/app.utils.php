@@ -71,3 +71,10 @@ function getBookById($id) {
     return null;
 }
 
+function applyRandomDiscount($price): float {
+    // Generate a random discount percentage between 5% and 20%
+    $discount_percentage = rand(5, 20);
+    $discount_amount = $price * ($discount_percentage / 100);
+    $new_price = $price - $discount_amount;
+    return floor(min($new_price, $price - 0.01)); // Ensure price is floored and at least 0.01 less
+}
