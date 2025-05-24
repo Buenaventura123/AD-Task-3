@@ -1,0 +1,79 @@
+.book-detail {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.book-detail .book-image {
+    flex: 1;
+    min-width: 250px; /* Ensures image doesn't get too small */
+    text-align: center;
+}
+
+.book-detail .book-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-detail .book-info {
+    flex: 2;
+    min-width: 300px; /* Ensures info section doesn't get too small */
+    padding-right: 20px; /* Add some padding on the right */
+}
+
+.book-detail .book-info h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.book-detail .book-info .author,
+.book-detail .book-info .category {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.book-detail .book-info .description {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.book-detail .book-info .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.book-detail .book-info .stock {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.book-detail .book-info .release-info {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Mobile responsiveness for book details */
+@media (max-width: 768px) {
+    .book-detail {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items when stacked */
+        text-align: center;
+    }
+
+    .book-detail .book-info {
+        padding-right: 0; /* Remove right padding when stacked */
+    }
+}
