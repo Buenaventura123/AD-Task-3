@@ -3,7 +3,7 @@ session_start(); // Start the session to manage cart
 $pageTitle = 'Shopping Cart';
 $pageCss = '/AD-Task-3/page/cart/assets/css/cart.css';
 require_once __DIR__ . '/../../components/componentGroup/header.component.php';
-require_once __DIR__ . '/../../utils/app_utils.php';
+require_once __DIR__ . '/../../utils/app.utils.php';
 
 $cart = $_SESSION['cart'] ?? [];
 $total_price = 0;
