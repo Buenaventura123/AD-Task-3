@@ -89,7 +89,7 @@
 </head>
 <body>
     <div class="landing-container">
-        <h1>Welcome to AD Bookstore!</h1>
+        <h1>Welcome to NOT SO BOOKSTORE!</h1>
         <p>Discover your next favorite book. We offer a wide selection of titles in various genres, from programming to web design.</p>
         <a href="/AD-Task-3/page/home/index.php" class="btn-enter">Enter the Bookstore</a>
     </div>
