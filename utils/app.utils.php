@@ -78,3 +78,46 @@ function applyRandomDiscount($price): float {
     $new_price = $price - $discount_amount;
     return floor(min($new_price, $price - 0.01)); // Ensure price is floored and at least 0.01 less
 }
+
+function createSlug($text) {
+    // Remove special characters, convert to lowercase, replace spaces with hyphens
+    $text = preg_replace('/[^A-Za-z0-9-]+/', '-', $text);
+    $text = strtolower($text);
+    $text = trim($text, '-');
+    return $text;
+}
+
+function daysUntilRelease($releaseDateString) {
+    try {
+        $releaseDate = new DateTime($releaseDateString);
+        $now = new DateTime();
+        if ($releaseDate < $now) {
+            return 'Released!';
+        }
+        $interval = $now->diff($releaseDate);
+        return $interval->days . ' days left';
+    } catch (Exception $e) {
+        return 'N/A';
+    }
+}
+
+// Example of string manipulation from the list not used elsewhere, but for demonstration:
+function demonstrateStringManipulation() {
+    $text = "  Hello World from PHP!  ";
+    echo "Original: '{$text}'<br>";
+    echo "Lowercase: '" . strtolower($text) . "'<br>"; // strtolower
+    echo "Uppercase: '" . strtoupper($text) . "'<br>"; // strtoupper
+    echo "Trimmed: '" . trim($text) . "'<br>";         // trim
+    echo "Left Trimmed: '" . ltrim($text) . "'<br>";     // ltrim
+    echo "Right Trimmed: '" . rtrim($text) . "'<br>";    // rtrim
+    echo "Substring (0, 5): '" . substr($text, 2, 5) . "'<br>"; // substr (adjusted start for trimmed text)
+
+    $commaSeparated = "apple,banana,orange";
+    $array = explode(",", $commaSeparated); // explode
+    echo "Exploded to array: " . implode(" | ", $array) . "<br>"; // implode
+
+    $arrayToRemove = ['a', 'b', 'c'];
+    unset($arrayToRemove[1]); // unset
+    echo "Unset array element: " . implode(" ", $arrayToRemove) . "<br>";
+}
+// demonstrateStringManipulation(); // Uncomment to see output for string functions
