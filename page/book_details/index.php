@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../utils/app_utils.php';
+require_once __DIR__ . '/../../utils/app.utils.php';
 
 $book_id = $_GET['id'] ?? null;
 $book = null;
@@ -10,12 +10,12 @@ if ($book_id) {
 
 if (!$book) {
     // Book not found, redirect or show an error
-    header('Location: /AD-Bookstore/page/home/index.php');
+    header('Location: /AD-Task-3/page/home/index.php');
     exit;
 }
 
 $pageTitle = htmlspecialchars($book['title']);
-$pageCss = '/AD-Bookstore/page/book_details/assets/css/book_details.css';
+$pageCss = '/AD-Task-3/page/book_details/assets/css/book_details.css';
 require_once __DIR__ . '/../../components/componentGroup/header.component.php';
 ?>
 
@@ -41,7 +41,7 @@ require_once __DIR__ . '/../../components/componentGroup/header.component.php';
         ?>
 
         <?php if ($book['stock'] > 0): ?>
-            <form action="/AD-Bookstore/handlers/book_operations.handler.php" method="post">
+            <form action="/AD-Task-3/handlers/book_operations.handler.php" method="post">
                 <input type="hidden" name="action" value="add_to_cart">
                 <input type="hidden" name="book_id" value="<?php echo htmlspecialchars($book['id']); ?>">
                 <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
