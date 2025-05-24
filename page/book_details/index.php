@@ -21,7 +21,7 @@ require_once __DIR__ . '/../../components/componentGroup/header.component.php';
 
 <section class="book-detail">
     <div class="book-image">
-        <img src="<?php echo htmlspecialchars($book['image'] ?? DEFAULT_BOOK_COVER); ?>" alt="<?php echo htmlspecialchars($book['title']); ?> Cover">
+        <img src="<?php echo htmlspecialchars(string: $book['image'] ?? DEFAULT_BOOK_COVER); ?>" alt="<?php echo htmlspecialchars($book['title']); ?> Cover">
     </div>
     <div class="book-info">
         <h2><?php echo htmlspecialchars($book['title']); ?></h2>
