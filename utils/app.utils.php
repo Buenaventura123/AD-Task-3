@@ -71,7 +71,7 @@ function getBookById($id) {
     return null;
 }
 
-function applyRandomDiscount($price): float {
+function applyRandomDiscount($price) {
     // Generate a random discount percentage between 5% and 20%
     $discount_percentage = rand(5, 20);
     $discount_amount = $price * ($discount_percentage / 100);
@@ -102,7 +102,7 @@ function daysUntilRelease($releaseDateString) {
 }
 
 // Example of string manipulation from the list not used elsewhere, but for demonstration:
-function demonstrateStringManipulation() {
+function stringManipulation() {
     $text = "  Hello World from PHP!  ";
     echo "Original: '{$text}'<br>";
     echo "Lowercase: '" . strtolower($text) . "'<br>"; // strtolower
@@ -120,4 +120,3 @@ function demonstrateStringManipulation() {
     unset($arrayToRemove[1]); // unset
     echo "Unset array element: " . implode(" ", $arrayToRemove) . "<br>";
 }
-// demonstrateStringManipulation(); // Uncomment to see output for string functions
