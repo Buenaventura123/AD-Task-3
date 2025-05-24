@@ -17,7 +17,7 @@ $is_special_offer = rand(0, 1);
         <p class="special-offer">Special Offer! (<?php echo rand(5, 15); ?>% off applied)</p>
     <?php endif; ?>
     <?php if ($book['stock'] > 0): ?>
-        <a href="/AD-Bookstore/page/book_details/index.php?id=<?php echo htmlspecialchars($book['id']); ?>" class="btn">View Details</a>
+        <a href="/AD-Task-3/page/book_details/index.php?id=<?php echo htmlspecialchars($book['id']); ?>" class="btn">View Details</a>
     <?php else: ?>
         <p class="out-of-stock">Out of Stock</p>
     <?php endif; ?>

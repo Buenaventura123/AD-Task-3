@@ -2,7 +2,7 @@
 $pageTitle = 'Home';
 $pageCss = '/AD-Bookstore/page/home/assets/css/home.css';
 require_once __DIR__ . '/../../components/componentGroup/header.component.php';
-require_once __DIR__ . '/../../utils/app_utils.php';
+require_once __DIR__ . '/../../utils/app.utils.php';
 
 // Get all books using the utility function
 $books = getAllBooks();
@@ -16,7 +16,7 @@ $books = getAllBooks();
             // Pass the current book data to the template
             // Using extract() here for simplicity within the loop to make $book available directly
             extract(['book' => $book]);
-            include __DIR__ . '/../../components/template/book_card.template.php';
+            include __DIR__ . '/../../components/template/book_card.component.php';
             ?>
         <?php endforeach; ?>
     </div>
