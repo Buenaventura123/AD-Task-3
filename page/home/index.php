@@ -21,7 +21,7 @@ $books = getAllBooks();
             <?php
             extract(['book' => $book]);
             // Path for book_card.template.php now correctly includes 'templates' (plural) and '.template.php'
-            include __DIR__ . '/../../components/template/book_card.componen.php'; 
+            include __DIR__ . '/../../components/template/book_card.component.php'; 
             ?>
         <?php endforeach; ?>
     </div>
