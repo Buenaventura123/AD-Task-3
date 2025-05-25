@@ -1,6 +1,6 @@
 <?php
 // Constants
-define('APP_NAME', 'AD Bookstore');
+define('APP_NAME', 'Not a Bookstore');
 define('DEFAULT_BOOK_COVER', '../assets/img/book_cover_placeholder.jpg');
 
 // Our "Database" of Books (using an array)
