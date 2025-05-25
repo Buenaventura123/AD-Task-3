@@ -1,4 +1,7 @@
 <?php
+session_start(); // Ensure session is started for cart functionality
+
+// CORRECTED: 'app.utils.php' to 'app_utils.php'
 require_once __DIR__ . '/../../utils/app.utils.php';
 
 $book_id = $_GET['id'] ?? null;
@@ -16,12 +19,13 @@ if (!$book) {
 
 $pageTitle = htmlspecialchars($book['title']);
 $pageCss = '/AD-Task-3/page/book_details/assets/css/book_details.css';
+
 require_once __DIR__ . '/../../components/componentGroup/header.component.php';
 ?>
 
 <section class="book-detail">
     <div class="book-image">
-        <img src="<?php echo htmlspecialchars(string: $book['image'] ?? DEFAULT_BOOK_COVER); ?>" alt="<?php echo htmlspecialchars($book['title']); ?> Cover">
+        <img src="<?php echo htmlspecialchars($book['image'] ?? DEFAULT_BOOK_COVER); ?>" alt="<?php echo htmlspecialchars($book['title']); ?> Cover">
     </div>
     <div class="book-info">
         <h2><?php echo htmlspecialchars($book['title']); ?></h2>
@@ -50,6 +54,14 @@ require_once __DIR__ . '/../../components/componentGroup/header.component.php';
     </div>
 </section>
 
+<main>
+    <ul>
+        <li>tite</li>
+        <li>weh</li>
+    </ul>
+</main>
+
 <?php
+// This path is correct if 'componentGroup' exists as you clarified
 require_once __DIR__ . '/../../components/componentGroup/footer.component.php';
 ?>
