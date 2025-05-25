@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not A Bookstore</title>
+    <title>Welcome to AD Bookstore</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,13 +16,13 @@
             min-height: 100vh;
             color: #333;
             text-align: center;
-            background-image: url('/AD-Task-3/assets/img/book_cover_placeholder.jpg'); /* Optional: Use one of your images */
+            background-image: url('/AD-Task-3/assets/img/book_cover_placeholder.jpg');
             background-size: cover;
             background-position: center;
         }
 
         .landing-container {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 40px 60px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -56,7 +56,7 @@
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 50px; /* Pill-shaped button */
+            border-radius: 50px;
             font-size: 1.3em;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -69,7 +69,6 @@
             box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
         }
 
-        /* Basic responsiveness */
         @media (max-width: 600px) {
             .landing-container {
                 padding: 30px 40px;
@@ -89,7 +88,7 @@
 </head>
 <body>
     <div class="landing-container">
-        <h1>Welcome to NOT SO BOOKSTORE!</h1>
+        <h1>Welcome to AD Bookstore!</h1>
         <p>Discover your next favorite book. We offer a wide selection of titles in various genres, from programming to web design.</p>
         <a href="/AD-Task-3/page/home/index.php" class="btn-enter">Enter the Bookstore</a>
     </div>
